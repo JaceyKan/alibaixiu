@@ -8,11 +8,24 @@
 </head>
 
 <body>
-    <div class="login">
+    <form id="loginForm">
         用户名：<input type="text" name="userName"><br> 密码：
         <input type="password" name="pwd"><br>
-        <input type="button" value="登录">
-    </div>
+        <input type="button" value="登录" id="loginBtn">
+    </form>
+    <script>
+        var loginBtn = document.getElementById('loginBtn');
+        var loginForm = document.getElementById('loginForm');
+        loginBtn.addEventListener('click', function() {
+            var form = new FormData(loginForm);
+            var xhr = new XMLHttpRequest();
+            xhr.open('post', '/user/login');
+            xhr.send(form);
+            xhr.onload = function() {
+                console.log(xhr.responseText);
+            }
+        })
+    </script>
 </body>
 
 </html>
