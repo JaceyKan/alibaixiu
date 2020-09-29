@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/JaceyKan/alibaixiu/issues"
   },
-  "homepage": "https://github.com/JaceyKan/alibaixiu#readme"
+  "homepage": "https://github.com/JaceyKan/alibaixiu#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
